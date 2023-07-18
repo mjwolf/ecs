@@ -5164,6 +5164,13 @@
       description: Name of the resource being acted upon.
       example: test-pod-cdcws
       default_field: false
+    - name: resource.parent.name
+      level: extended
+      type: keyword
+      ignore_above: 1024
+      description: Name of the parent of the resource being acted upon.
+      example: test-daemonset
+      default_field: false
     - name: resource.parent.type
       level: extended
       type: keyword

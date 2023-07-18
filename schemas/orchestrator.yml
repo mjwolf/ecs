@@ -101,6 +101,13 @@
       description: >
         Type of resource being acted upon.
 
+    - name: resource.parent.name
+      level: extended
+      type: keyword
+      example: test-daemonset
+      description: >
+        Name of the parent of the resource being acted upon.
+
     - name: resource.parent.type
       level: extended
       type: keyword

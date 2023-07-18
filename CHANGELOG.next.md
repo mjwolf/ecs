@@ -16,6 +16,7 @@ Thanks, you're awesome :-) -->
 
 #### Added
 * Added `container.security_context.privileged` to indicated whether a container was started in privileged mode. #2219, #2225
+* Added `orchestrator.resource.parent.name` to provide the name of the parent resource.
 
 #### Improvements
 

@@ -7368,6 +7368,17 @@ orchestrator.resource.name:
   normalize: []
   short: Name of the resource being acted upon.
   type: keyword
+orchestrator.resource.parent.name:
+  dashed_name: orchestrator-resource-parent-name
+  description: Name of the parent of the resource being acted upon.
+  example: test-daemonset
+  flat_name: orchestrator.resource.parent.name
+  ignore_above: 1024
+  level: extended
+  name: resource.parent.name
+  normalize: []
+  short: Name of the parent of the resource being acted upon.
+  type: keyword
 orchestrator.resource.parent.type:
   dashed_name: orchestrator-resource-parent-type
   description: Type or kind of the parent resource associated with the event being

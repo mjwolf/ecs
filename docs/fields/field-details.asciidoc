@@ -7047,6 +7047,22 @@ example: `test-pod-cdcws`
 // ===============================================================
 
 |
+[[field-orchestrator-resource-parent-name]]
+<<field-orchestrator-resource-parent-name, orchestrator.resource.parent.name>>
+
+a| Name of the parent of the resource being acted upon.
+
+type: keyword
+
+
+
+example: `test-daemonset`
+
+| extended
+
+// ===============================================================
+
+|
 [[field-orchestrator-resource-parent-type]]
 <<field-orchestrator-resource-parent-type, orchestrator.resource.parent.type>>
 
