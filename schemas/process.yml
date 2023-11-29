@@ -100,7 +100,7 @@
         generate a unique and reproducible entity_id, so that if the same process is
         observed by multiple collectors, it can be identified as the same process.
 
-        === Windows
+        Windows:
 
         A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -114,7 +114,8 @@
 
         For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-        === Linux
+
+        Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted as:
         "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -129,9 +130,10 @@
 
         For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-        === macOS
 
-        For Apple OSs with Hardware UUID available, a string formatted as:
+        macOS:
+
+        A string formatted as:
         "HardwareUUID__PID__StartTimeSeconds"
 
         HardwareUUID:: The machine hardware UUID, which can be read from System Profiler

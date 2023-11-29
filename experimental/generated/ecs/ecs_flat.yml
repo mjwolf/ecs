@@ -8279,7 +8279,7 @@ process.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -8293,7 +8293,8 @@ process.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -8308,9 +8309,10 @@ process.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -8427,7 +8429,7 @@ process.entry_leader.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -8441,7 +8443,8 @@ process.entry_leader.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -8456,9 +8459,10 @@ process.entry_leader.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -8589,7 +8593,7 @@ process.entry_leader.parent.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -8603,7 +8607,8 @@ process.entry_leader.parent.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -8618,9 +8623,10 @@ process.entry_leader.parent.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -8662,7 +8668,7 @@ process.entry_leader.parent.session_leader.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -8676,7 +8682,8 @@ process.entry_leader.parent.session_leader.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -8691,9 +8698,10 @@ process.entry_leader.parent.session_leader.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -9156,7 +9164,7 @@ process.group_leader.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -9170,7 +9178,8 @@ process.group_leader.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -9185,9 +9194,10 @@ process.group_leader.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -10617,7 +10627,7 @@ process.parent.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -10631,7 +10641,8 @@ process.parent.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -10646,9 +10657,10 @@ process.parent.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -10730,7 +10742,7 @@ process.parent.group_leader.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -10744,7 +10756,8 @@ process.parent.group_leader.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -10759,9 +10772,10 @@ process.parent.group_leader.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -12277,7 +12291,7 @@ process.session_leader.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -12291,7 +12305,8 @@ process.session_leader.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -12306,9 +12321,10 @@ process.session_leader.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -12415,7 +12431,7 @@ process.session_leader.parent.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -12429,7 +12445,8 @@ process.session_leader.parent.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -12444,9 +12461,10 @@ process.session_leader.parent.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
@@ -12488,7 +12506,7 @@ process.session_leader.parent.session_leader.entity_id:
     a unique and reproducible entity_id, so that if the same process is observed by
     multiple collectors, it can be identified as the same process.
 
-    === Windows
+    Windows:
 
     A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
 
@@ -12502,7 +12520,8 @@ process.session_leader.parent.session_leader.entity_id:
 
     For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
-    === Linux
+
+    Linux:
 
     For Linux systems with PID namespaces and Boot ID available, a string formatted
     as: "PidNsInode__BootID__PID__StartTimeSeconds"
@@ -12517,9 +12536,10 @@ process.session_leader.parent.session_leader.entity_id:
 
     For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
 
-    === macOS
 
-    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+    macOS:
+
+    A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
 
     HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
 
