@@ -8202,14 +8202,55 @@ process.entity_id:
   dashed_name: process-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.entity_id
   ignore_above: 1024
   level: extended
@@ -8309,14 +8350,55 @@ process.entry_leader.entity_id:
   dashed_name: process-entry-leader-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.entry_leader.entity_id
   ignore_above: 1024
   level: extended
@@ -8430,14 +8512,55 @@ process.entry_leader.parent.entity_id:
   dashed_name: process-entry-leader-parent-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.entry_leader.parent.entity_id
   ignore_above: 1024
   level: extended
@@ -8462,14 +8585,55 @@ process.entry_leader.parent.session_leader.entity_id:
   dashed_name: process-entry-leader-parent-session-leader-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.entry_leader.parent.session_leader.entity_id
   ignore_above: 1024
   level: extended
@@ -8915,14 +9079,55 @@ process.group_leader.entity_id:
   dashed_name: process-group-leader-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.group_leader.entity_id
   ignore_above: 1024
   level: extended
@@ -10335,14 +10540,55 @@ process.parent.entity_id:
   dashed_name: process-parent-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.parent.entity_id
   ignore_above: 1024
   level: extended
@@ -10407,14 +10653,55 @@ process.parent.group_leader.entity_id:
   dashed_name: process-parent-group-leader-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.parent.group_leader.entity_id
   ignore_above: 1024
   level: extended
@@ -11913,14 +12200,55 @@ process.session_leader.entity_id:
   dashed_name: process-session-leader-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.session_leader.entity_id
   ignore_above: 1024
   level: extended
@@ -12010,14 +12338,55 @@ process.session_leader.parent.entity_id:
   dashed_name: process-session-leader-parent-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.session_leader.parent.entity_id
   ignore_above: 1024
   level: extended
@@ -12042,14 +12411,55 @@ process.session_leader.parent.session_leader.entity_id:
   dashed_name: process-session-leader-parent-session-leader-entity-id
   description: 'Unique identifier for the process.
 
-    The implementation of this is specified by the data source, but some examples
-    of what could be used here are a process-generated UUID, Sysmon Process GUIDs,
-    or a hash of some uniquely identifying components of a process.
-
     Constructing a globally unique identifier is a common practice to mitigate PID
     reuse as well as to identify a specific process over time, across multiple monitored
-    hosts.'
-  example: c2c455d9f99375d
+    hosts.
+
+    entity_id SHOULD be generated with the below methods. These methods will generate
+    a unique and reproducible entity_id, so that if the same process is observed by
+    multiple collectors, it can be identified as the same process.
+
+    === Windows
+
+    A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+
+    MachineGUID:: The Windows Machine GUID, which can be read from the Windows registry
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    StartTimeMilliseconds:: Millisecond precision of process start time
+
+    For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
+
+    === Linux
+
+    For Linux systems with PID namespaces and Boot ID available, a string formatted
+    as: "PidNsInode__BootID__PID__StartTimeSeconds"
+
+    PidNsInode:: The PID namespace inode this PID is taken from
+
+    BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+
+    === macOS
+
+    For Apple OSs with Hardware UUID available, a string formatted as: "HardwareUUID__PID__StartTimeSeconds"
+
+    HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+    PID:: Process ID
+
+    StartTimeSeconds:: Process start time in UNIX time seconds
+
+    For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
+  example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
   flat_name: process.session_leader.parent.session_leader.entity_id
   ignore_above: 1024
   level: extended
