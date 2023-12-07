@@ -10491,48 +10491,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.entity_id
       ignore_above: 1024
       level: extended
@@ -10642,48 +10649,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.entry_leader.entity_id
       ignore_above: 1024
       level: extended
@@ -10807,48 +10821,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.entry_leader.parent.entity_id
       ignore_above: 1024
       level: extended
@@ -10883,48 +10904,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.entry_leader.parent.session_leader.entity_id
       ignore_above: 1024
       level: extended
@@ -11380,48 +11408,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.group_leader.entity_id
       ignore_above: 1024
       level: extended
@@ -12849,48 +12884,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.parent.entity_id
       ignore_above: 1024
       level: extended
@@ -12965,48 +13007,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.parent.group_leader.entity_id
       ignore_above: 1024
       level: extended
@@ -14518,48 +14567,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.session_leader.entity_id
       ignore_above: 1024
       level: extended
@@ -14659,48 +14715,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.session_leader.parent.entity_id
       ignore_above: 1024
       level: extended
@@ -14735,48 +14798,55 @@ process:
 
         Windows:
 
-        A String formatted as: "MachineGUID__PID__StartTimeSeconds__StartTimeMilliseconds"
+        For Windows versions with `ProcessStartKey` available (Windows 10 and above),
+        a string formatted as: "PID__ProcessStartKey__MachineGUID"
+
+        For Windows versions without `ProcessStartKey` (versions <= Windows 8), a
+        string formatted as: "PID__ProcessCreationTime__GUID"
+
+        PID:: Process ID
+
+        ProcessStartKey:: The ProcessStartKey can be retrieved with NtQueryInformationProcess
+        function.
+
+        ProcessCreationTime:: The ProcessCreationTime can be retrieved with GetProcessTimes
+        function.
 
         MachineGUID:: The Windows Machine GUID, which can be read from the Windows
         registry
 
-        PID:: Process ID
+        For example, "4074__84723967989907548__855eaadf-e949-4aa0-b6b3-17f0db42624a"
 
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        StartTimeMilliseconds:: Millisecond precision of process start time
-
-        For example, "855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__230"
 
 
         Linux:
 
         For Linux systems with PID namespaces and Boot ID available, a string formatted
-        as: "PidNsInode__BootID__PID__StartTimeSeconds"
+        as: "PID__StartTimeSeconds__PidNsInode__BootID"
+
+        PID:: Process ID
+
+        StartTimeSeconds:: Process start time in UNIX time seconds
 
         PidNsInode:: The PID namespace inode this PID is taken from
 
         BootID:: The machine boot ID, which can be read from `/proc/sys/kernel/random/boot_id`
 
-        PID:: Process ID
-
-        StartTimeSeconds:: Process start time in UNIX time seconds
-
-        For example: "4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773__22__1701212959"
+        For example, "22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773"
 
 
         macOS:
 
-        A string formatted as: "HardwareUUID__PID__StartTimeSeconds"
-
-        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+        A string formatted as: "PID__StartTimeSeconds__HardwareUUID"
 
         PID:: Process ID
 
         StartTimeSeconds:: Process start time in UNIX time seconds
 
-        For example, "34e24ad0-d431-4f89-80e4-a1fd8469534f__22__1701212579"'
-      example: 855eaadf-e949-4aa0-b6b3-17f0db42624a__22__1701212579__0230
+        HardwareUUID:: The machine hardware UUID, which can be read from System Profiler
+
+        For example, "22__1701212579__34e24ad0-d431-4f89-80e4-a1fd8469534f"'
+      example: 22__1701212959__4026531836__3f179e14-7747-45c3-b0b1-5ac2355a3773
       flat_name: process.session_leader.parent.session_leader.entity_id
       ignore_above: 1024
       level: extended
