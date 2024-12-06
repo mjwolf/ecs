@@ -260,7 +260,7 @@ def finalize_template(
                 mappings_section['_meta'] = template.pop('_meta')
 
     else:
-        template['template']['mappings'] = mappings_section
+        template['mappings'] = mappings_section
         template['composed_of'] = component_names
         template['_meta'] = {
             "ecs_version": ecs_version,
