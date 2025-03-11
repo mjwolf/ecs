@@ -1,27 +1,24 @@
-[[ecs-field-reference]]
-== {ecs} Field Reference
+## {ecs} Field Reference
 
 This is the documentation of ECS version {{ ecs_generated_version }}.
 
 ECS defines multiple groups of related fields. They are called "field sets".
-The <<ecs-base,Base>> field set is the only one whose fields are defined
+The [Base](#ecs-base) field set is the only one whose fields are defined
 at the root of the event.
 
 All other field sets are defined as objects in {es}, under which
 all fields are defined.
 
 For a single page representation of all fields, please see the
-{ecs_github_repo_link}/generated/csv/fields.csv[generated CSV of fields].
+[generated CSV of fields]({ecs_github_repo_link}/generated/csv/fields.csv).
 
-[float]
-[[ecs-fieldsets]]
-=== Field Sets
-[cols="<,<",options="header",]
-|=====
-| Field Set  | Description
+### Field Sets
+
+| Field Set  | Description |
+|------------|------------|
 {% for fieldset in fieldsets %}
-| <<ecs-{{ fieldset['name'] }},{{ fieldset['title'] }}>> | {{ fieldset.get('short', fieldset['description']) }}
+| [{{ fieldset['title'] }}](#ecs-{{ fieldset['name'] }}) | {{ fieldset.get('short', fieldset['description']) }} |
 {% endfor %}
-|=====
 
-include::field-details.asciidoc[]
+[See field details](field-details.md)
+

@@ -34,13 +34,13 @@ def generate(nested, docs_only_nested, ecs_generated_version, semconv_version, o
     if semconv_version.startswith('v'):
         semconv_version = semconv_version[1:]
 
-    save_asciidoc(path.join(out_dir, 'index.asciidoc'), page_index(ecs_generated_version))
-    save_asciidoc(path.join(fields_docs_dir, 'fields.asciidoc'), page_field_index(nested, ecs_generated_version))
-    save_asciidoc(path.join(fields_docs_dir, 'field-details.asciidoc'), page_field_details(nested, docs_only_nested))
-    save_asciidoc(path.join(fields_docs_dir, 'field-values.asciidoc'), page_field_values(nested))
-    save_asciidoc(path.join(otel_docs_dir, 'otel-fields-mapping.asciidoc'),
+    save_markdown(path.join(out_dir, 'index.md'), page_index(ecs_generated_version))
+    save_markdown(path.join(fields_docs_dir, 'fields.md'), page_field_index(nested, ecs_generated_version))
+    save_markdown(path.join(fields_docs_dir, 'field-details.md'), page_field_details(nested, docs_only_nested))
+    save_markdown(path.join(fields_docs_dir, 'field-values.md'), page_field_values(nested))
+    save_markdown(path.join(otel_docs_dir, 'otel-fields-mapping.md'),
                   page_otel_mapping(nested, ecs_generated_version, semconv_version))
-    save_asciidoc(path.join(otel_docs_dir, 'otel-mapping-summary.asciidoc'),
+    save_markdown(path.join(otel_docs_dir, 'otel-mapping-summary.md'),
                   page_otel_summary(otel_generator, nested, ecs_generated_version, semconv_version))
 
 # Helpers
@@ -112,7 +112,7 @@ def check_for_usage_doc(fieldset_name, usage_file_list=ecs_helpers.usage_doc_fil
 
     :param fieldset_name: The name of the target fieldset
     """
-    return f"{fieldset_name}.asciidoc" in usage_file_list
+    return f"{fieldset_name}.md" in usage_file_list
 
 
 def templated(template_name):
@@ -145,7 +145,7 @@ def render_template(template_name, **context):
     return template.render(**context)
 
 
-def save_asciidoc(f, text):
+def save_markdown(f, text):
     with open(f, "w") as outfile:
         outfile.write(text)
 
