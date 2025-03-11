@@ -26,18 +26,16 @@ from copy import deepcopy
 
 
 def generate(nested, docs_only_nested, ecs_generated_version, semconv_version, otel_generator, out_dir):
-    fields_docs_dir = out_dir
-    otel_docs_dir = out_dir + '/opentelemetry'
 
-    ecs_helpers.make_dirs(fields_docs_dir)
+    ecs_helpers.make_dirs(out_dir)
 
     if semconv_version.startswith('v'):
         semconv_version = semconv_version[1:]
 
     save_markdown(path.join(out_dir, 'index.md'), page_index(ecs_generated_version))
-    save_markdown(path.join(otel_docs_dir, 'ecs-otel-alignment-details.md'),
+    save_markdown(path.join(out_dir, 'ecs-otel-alignment-details.md'),
                   page_otel_alignment_details(nested, ecs_generated_version, semconv_version))
-    save_markdown(path.join(otel_docs_dir, 'ecs-otel-alignment-overview.md'),
+    save_markdown(path.join(out_dir, 'ecs-otel-alignment-overview.md'),
                   page_otel_alignment_overview(otel_generator, nested, ecs_generated_version, semconv_version))
     fieldsets = ecs_helpers.dict_sorted_by_keys(nested, ['group', 'name'])
     for fieldset in fieldsets:
