@@ -55,9 +55,12 @@ The effective top level domain (eTLD), also known as the domain suffix, is the l
 example: `co.uk`<br> | extended |
 
 
-### field sets that can be nested under Destination [ecs--nestings]
+### Field sets that can be nested under Destination [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `destination.as.*` |

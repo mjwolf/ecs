@@ -13,7 +13,9 @@ Fields that describe a device instance and its characteristics. Data collected f
 
 This field group definition is based on the Device namespace of the OpenTelemetry Semantic Conventions (https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/device/).
 
-> **Beta:** These fields are in beta and are subject to change.
+::::{warning}
+These fields are in beta and are subject to change.
+::::
 
 ## Device field details [_device_field_details]
 

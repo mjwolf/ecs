@@ -16,11 +16,14 @@ applies_to:
 {# Fieldset label beta header -#}
 {% if fieldset['beta'] -%}
 
-> **Beta:** {{ fieldset['beta'] }}
+::::{warning}
+{{ fieldset['beta'] }}
+::::
 
 {% endif -%}
 
 {# Field Details Table Header -#}
+
 ## {{ fieldset['title'] }} field details [_{{ fieldset['title'] | lower | replace(" ", "_") }}_field_details]
 
 | Field | Description | Level |
@@ -94,9 +97,12 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 
 {% if 'nestings' in fieldset -%}
 
-### field sets that can be nested under {{ fieldset['title'] }} [ecs-{{ fieldset['hashed_name'] }}-nestings]
+### Field sets that can be nested under {{ fieldset['title'] }} [ecs-{{ fieldset['dashed_name'] }}-nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 {% for entry in render_nestings_reuse_section -%}

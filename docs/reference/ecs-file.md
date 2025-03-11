@@ -107,9 +107,12 @@ The `file` fields are expected to be nested at:
 Note also that the `file` fields may be used directly at the root of the events.
 
 
-### field sets that can be nested under File [ecs--nestings]
+### Field sets that can be nested under File [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `file.code_signature.*` |

@@ -11,7 +11,9 @@ applies_to:
 
 These fields contain Mac OS Mach Object file format (Mach-O) metadata.
 
-> **Beta:** These fields are in beta and are subject to change.
+::::{warning}
+These fields are in beta and are subject to change.
+::::
 
 ## Mach-O Header field details [_mach-o_header_field_details]
 

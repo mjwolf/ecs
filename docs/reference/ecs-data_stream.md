@@ -15,7 +15,9 @@ In the new data stream naming scheme the value of the data stream fields combine
 
 An Elasticsearch data stream consists of one or more backing indices, and a data stream name forms part of the backing indices names. Due to this convention, data streams must also follow index naming restrictions. For example, data stream names cannot include `\`, `/`, `*`, `?`, `"`, `<`, `>`, `|`, ` ` (space character), `,`, or `#`. Please see the Elasticsearch reference for additional https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html#indices-create-api-path-params[restrictions].
 
-> **Beta:** These fields are in beta and are subject to change.
+::::{warning}
+These fields are in beta and are subject to change.
+::::
 
 ## Data Stream field details [_data_stream_field_details]
 

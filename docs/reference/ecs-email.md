@@ -84,9 +84,12 @@ The name of the application that was used to draft and send the original email m
 example: `Spambot v2.5`<br> | extended |
 
 
-### field sets that can be nested under Email [ecs--nestings]
+### Field sets that can be nested under Email [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `email.attachments.file.hash.*` |

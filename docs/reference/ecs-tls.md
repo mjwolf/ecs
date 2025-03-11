@@ -107,9 +107,12 @@ Normalized lowercase protocol name parsed from original string.<br><br>type: key
 example: `tls`<br> | extended |
 
 
-### field sets that can be nested under TLS [ecs--nestings]
+### Field sets that can be nested under TLS [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `tls.client.x509.*` |

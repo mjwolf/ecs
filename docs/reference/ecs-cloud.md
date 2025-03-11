@@ -59,9 +59,12 @@ The `cloud` fields are expected to be nested at:
 Note also that the `cloud` fields may be used directly at the root of the events.
 
 
-### field sets that can be nested under Cloud [ecs--nestings]
+### Field sets that can be nested under Cloud [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `cloud.origin.*` |

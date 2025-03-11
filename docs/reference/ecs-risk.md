@@ -11,7 +11,9 @@ applies_to:
 
 Fields for describing risk score and risk level of entities such as hosts and users. These fields are not allowed to be nested under `event.*`. Please continue to use `event.risk_score` and `event.risk_score_norm` for event risk.
 
-> **Beta:** These fields are in beta and are subject to change.
+::::{warning}
+These fields are in beta and are subject to change.
+::::
 
 ## Risk information field details [_risk_information_field_details]
 

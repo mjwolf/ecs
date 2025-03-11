@@ -63,9 +63,12 @@ The `source` fields are expected to be nested at:
 Note also that the `source` fields may be used directly at the root of the events.
 
 
-### field sets that can be nested under Source [ecs--nestings]
+### Field sets that can be nested under Source [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `source.as.*` |

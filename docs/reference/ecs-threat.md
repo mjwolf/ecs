@@ -240,9 +240,12 @@ Note: This field should contain an array of values.<br>
 example: `https://attack.mitre.org/techniques/T1059/001/`<br> | extended |
 
 
-### field sets that can be nested under Threat [ecs--nestings]
+### Field sets that can be nested under Threat [ecs--nestings]
 
-| location | field set | description |
+::::{tab-set}
+
+:::{tab-item} Field sets
+| Location | Field set | Description |
 |---|---|---|
 
 | `threat.enrichments.indicator.as.*` |
