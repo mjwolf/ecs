@@ -17,6 +17,7 @@
 
 from functools import wraps
 import os.path as path
+import os
 
 import jinja2
 
@@ -25,8 +26,7 @@ from copy import deepcopy
 
 
 def generate(nested, docs_only_nested, ecs_generated_version, semconv_version, otel_generator, out_dir):
-    # fields docs now have a dedicated docs subdir: docs/fields
-    fields_docs_dir = out_dir + '/fields'
+    fields_docs_dir = out_dir
     otel_docs_dir = out_dir + '/opentelemetry'
 
     ecs_helpers.make_dirs(fields_docs_dir)
@@ -35,13 +35,13 @@ def generate(nested, docs_only_nested, ecs_generated_version, semconv_version, o
         semconv_version = semconv_version[1:]
 
     save_markdown(path.join(out_dir, 'index.md'), page_index(ecs_generated_version))
-    save_markdown(path.join(fields_docs_dir, 'fields.md'), page_field_index(nested, ecs_generated_version))
-    save_markdown(path.join(fields_docs_dir, 'field-details.md'), page_field_details(nested, docs_only_nested))
-    save_markdown(path.join(fields_docs_dir, 'field-values.md'), page_field_values(nested))
     save_markdown(path.join(otel_docs_dir, 'otel-fields-mapping.md'),
                   page_otel_mapping(nested, ecs_generated_version, semconv_version))
     save_markdown(path.join(otel_docs_dir, 'otel-mapping-summary.md'),
                   page_otel_summary(otel_generator, nested, ecs_generated_version, semconv_version))
+    fieldsets = ecs_helpers.dict_sorted_by_keys(nested, ['group', 'name'])
+    for fieldset in fieldsets:
+        save_markdown(path.join(out_dir, f'ecs-{fieldset["name"]}.md'), page_fieldset(fieldset, nested, ecs_generated_version))
 
 # Helpers
 
@@ -146,6 +146,7 @@ def render_template(template_name, **context):
 
 
 def save_markdown(f, text):
+    os.makedirs(path.dirname(f), exist_ok=True)
     with open(f, "w") as outfile:
         outfile.write(text)
 
@@ -155,7 +156,10 @@ def save_markdown(f, text):
 local_dir = path.dirname(path.abspath(__file__))
 TEMPLATE_DIR = path.join(local_dir, '../templates')
 template_loader = jinja2.FileSystemLoader(searchpath=TEMPLATE_DIR)
-template_env = jinja2.Environment(loader=template_loader, keep_trailing_newline=True)
+template_env = jinja2.Environment(loader=template_loader,
+                                  keep_trailing_newline=True,
+                                  trim_blocks=True,
+                                  lstrip_blocks=True)
 
 # Rendering schemas
 
@@ -170,11 +174,17 @@ def page_index(ecs_generated_version):
 # Field Index
 
 
-@templated('fields.j2')
-def page_field_index(nested, ecs_generated_version):
-    fieldsets = ecs_helpers.dict_sorted_by_keys(nested, ['group', 'name'])
-    return dict(ecs_generated_version=ecs_generated_version, fieldsets=fieldsets)
-
+@templated('fieldset.j2')
+def page_fieldset(fieldset, nested, ecs_generated_version):
+    sorted_reuse_fields = render_fieldset_reuse_text(fieldset)
+    render_nestings_reuse_fields = render_nestings_reuse_section(fieldset)
+    sorted_fields = sort_fields(fieldset)
+    usage_doc = check_for_usage_doc(fieldset.get('name'))
+    return dict(fieldset=fieldset,
+                sorted_reuse_fields=sorted_reuse_fields,
+                render_nestings_reuse_section=render_nestings_reuse_fields,
+                sorted_fields=sorted_fields,
+                usage_doc=usage_doc)
 
 # Field Details Page
 
