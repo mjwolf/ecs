@@ -18,18 +18,18 @@ They often show up in web service logs coming from the parsed user agent string.
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-user-agent-device-name$$$[user_agent.device.name](#field-user-agent-device-name) |
-Name of the device.type: keyword<br><br>
+Name of the device.<br><br>type: keyword<br><br>
 example: `iPhone`<br> | extended |
 | $$$field-user-agent-name$$$[user_agent.name](#field-user-agent-name) |
-Name of the user agent.type: keyword<br><br>
+Name of the user agent.<br><br>type: keyword<br><br>
 example: `Safari`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user_agent/#user-agent-name[user_agent.name] | extended |
 | $$$field-user-agent-original$$$[user_agent.original](#field-user-agent-original) |
-Unparsed user_agent string.type: keyword<br><br>
+Unparsed user_agent string.<br><br>type: keyword<br><br>
 Multi-fields:<br><br>
 user_agent.original.text (type: match_only_text)<br>
 example: `Mozilla/5.0 (iPhone; CPU iPhone OS 12_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user_agent/#user-agent-original[user_agent.original] | extended |
 | $$$field-user-agent-version$$$[user_agent.version](#field-user-agent-version) |
-Version of the user agent.type: keyword<br><br>
+Version of the user agent.<br><br>type: keyword<br><br>
 example: `12.0`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user_agent/#user-agent-version[user_agent.version] | extended |
 
 

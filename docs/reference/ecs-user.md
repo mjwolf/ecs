@@ -18,29 +18,29 @@ Fields can have one entry or multiple entries. If a user has more than one id, p
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-user-domain$$$[user.domain](#field-user-domain) |
-Name of the directory the user is a member of.<br>For example, an LDAP or Active Directory domain name.type: keyword<br><br>
+Name of the directory the user is a member of.<br>For example, an LDAP or Active Directory domain name.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-user-email$$$[user.email](#field-user-email) |
-User email address.type: keyword<br><br>
+User email address.<br><br>type: keyword<br><br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-email[user.email] | extended |
 | $$$field-user-full-name$$$[user.full_name](#field-user-full-name) |
-User's full name, if available.type: keyword<br><br>
+User's full name, if available.<br><br>type: keyword<br><br>
 Multi-fields:<br><br>
 user.full_name.text (type: match_only_text)<br>
 example: `Albert Einstein`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-full-name[user.full_name] | extended |
 | $$$field-user-hash$$$[user.hash](#field-user-hash) |
-Unique user hash to correlate information for a user in anonymized form.<br>Useful if `user.id` or `user.name` contain confidential information and cannot be used.type: keyword<br><br>
+Unique user hash to correlate information for a user in anonymized form.<br>Useful if `user.id` or `user.name` contain confidential information and cannot be used.<br><br>type: keyword<br><br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-hash[user.hash] | extended |
 | $$$field-user-id$$$[user.id](#field-user-id) |
-Unique identifier of the user.type: keyword<br><br>
+Unique identifier of the user.<br><br>type: keyword<br><br>
 example: `S-1-5-21-202424912787-2692429404-2351956786-1000`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-id[user.id] | core |
 | $$$field-user-name$$$[user.name](#field-user-name) |
-Short name or login of the user.type: keyword<br><br>
+Short name or login of the user.<br><br>type: keyword<br><br>
 Multi-fields:<br><br>
 user.name.text (type: match_only_text)<br>
 example: `a.einstein`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-name[user.name] | core |
 | $$$field-user-roles$$$[user.roles](#field-user-roles) |
-Array of user roles at the time of the event.type: keyword<br><br>
+Array of user roles at the time of the event.<br><br>type: keyword<br><br>
 Note: This field should contain an array of values.<br>
 example: `["kibana_admin", "reporting_user"]`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-roles[user.roles] | extended |
 

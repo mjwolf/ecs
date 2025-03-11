@@ -16,30 +16,30 @@ The OS fields contain information about the operating system.
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-os-family$$$[os.family](#field-os-family) |
-OS family (such as redhat, debian, freebsd, windows).type: keyword<br><br>
+OS family (such as redhat, debian, freebsd, windows).<br><br>type: keyword<br><br>
 example: `debian`<br> | extended |
 | $$$field-os-full$$$[os.full](#field-os-full) |
-Operating system name, including the version or code name.type: keyword<br><br>
+Operating system name, including the version or code name.<br><br>type: keyword<br><br>
 Multi-fields:<br><br>
 os.full.text (type: match_only_text)<br>
 example: `Mac OS Mojave`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/os/#os-description[os.description] | extended |
 | $$$field-os-kernel$$$[os.kernel](#field-os-kernel) |
-Operating system kernel version as a raw string.type: keyword<br><br>
+Operating system kernel version as a raw string.<br><br>type: keyword<br><br>
 example: `4.4.0-112-generic`<br> | extended |
 | $$$field-os-name$$$[os.name](#field-os-name) |
-Operating system name, without the version.type: keyword<br><br>
+Operating system name, without the version.<br><br>type: keyword<br><br>
 Multi-fields:<br><br>
 os.name.text (type: match_only_text)<br>
 example: `Mac OS X`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/os/#os-name[os.name] | extended |
 | $$$field-os-platform$$$[os.platform](#field-os-platform) |
-Operating system platform (such centos, ubuntu, windows).type: keyword<br><br>
+Operating system platform (such centos, ubuntu, windows).<br><br>type: keyword<br><br>
 example: `darwin`<br> | extended |
 | $$$field-os-type$$$[os.type](#field-os-type) |
-Use the `os.type` field to categorize the operating system into one of the broad commercial families.<br>If the OS you're dealing with is not listed as an expected value, the field should not be populated. Please let us know by opening an issue with ECS, to propose its addition.Expected values for this field:<br><br>
+Use the `os.type` field to categorize the operating system into one of the broad commercial families.<br>If the OS you're dealing with is not listed as an expected value, the field should not be populated. Please let us know by opening an issue with ECS, to propose its addition.<br><br>Expected values for this field:<br><br>
 * `linux`<br>* `macos`<br>* `unix`<br>* `windows`<br>* `ios`<br>* `android`<br>type: keyword<br><br>
 example: `macos`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/conflict-910000?style=flat[relation,title=conflict,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/os/#os-type[os.type]**Note:** The expected values in ECS for `os.type` do not correspond with the values defined in semantic conventions! | extended |
 | $$$field-os-version$$$[os.version](#field-os-version) |
-Operating system version as a raw string.type: keyword<br><br>
+Operating system version as a raw string.<br><br>type: keyword<br><br>
 example: `10.14.1`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/os/#os-version[os.version] | extended |
 
 ## Field reuse [_field_reuse]

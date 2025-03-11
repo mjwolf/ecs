@@ -21,28 +21,28 @@ Note that this fieldset is used for common hashes that may be computed over a ra
 | --- | --- | --- |
 | $$$field-hash-cdhash$$$[hash.cdhash](#field-hash-cdhash) |
 beta: This field is beta and subject to change.
-Code directory hash, utilized to uniquely identify and authenticate the integrity of the executable code.type: keyword<br><br>
+Code directory hash, utilized to uniquely identify and authenticate the integrity of the executable code.<br><br>type: keyword<br><br>
 example: `3783b4052fd474dbe30676b45c329e7a6d44acd9`<br> | extended |
 | $$$field-hash-md5$$$[hash.md5](#field-hash-md5) |
-MD5 hash.type: keyword<br><br>
+MD5 hash.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-hash-sha1$$$[hash.sha1](#field-hash-sha1) |
-SHA1 hash.type: keyword<br><br>
+SHA1 hash.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-hash-sha256$$$[hash.sha256](#field-hash-sha256) |
-SHA256 hash.type: keyword<br><br>
+SHA256 hash.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-hash-sha384$$$[hash.sha384](#field-hash-sha384) |
-SHA384 hash.type: keyword<br><br>
+SHA384 hash.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-hash-sha512$$$[hash.sha512](#field-hash-sha512) |
-SHA512 hash.type: keyword<br><br>
+SHA512 hash.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-hash-ssdeep$$$[hash.ssdeep](#field-hash-ssdeep) |
-SSDEEP hash.type: keyword<br><br>
+SSDEEP hash.<br><br>type: keyword<br><br>
  | extended |
 | $$$field-hash-tlsh$$$[hash.tlsh](#field-hash-tlsh) |
-TLSH hash.type: keyword<br><br>
+TLSH hash.<br><br>type: keyword<br><br>
  | extended |
 
 ## Field reuse [_field_reuse]

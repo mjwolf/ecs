@@ -16,13 +16,13 @@ The interface fields are used to record ingress and egress interface information
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-interface-alias$$$[interface.alias](#field-interface-alias) |
-Interface alias as reported by the system, typically used in firewall implementations for e.g. inside, outside, or dmz logical interface naming.type: keyword<br><br>
+Interface alias as reported by the system, typically used in firewall implementations for e.g. inside, outside, or dmz logical interface naming.<br><br>type: keyword<br><br>
 example: `outside`<br> | extended |
 | $$$field-interface-id$$$[interface.id](#field-interface-id) |
-Interface ID as reported by an observer (typically SNMP interface ID).type: keyword<br><br>
+Interface ID as reported by an observer (typically SNMP interface ID).<br><br>type: keyword<br><br>
 example: `10`<br> | extended |
 | $$$field-interface-name$$$[interface.name](#field-interface-name) |
-Interface name as reported by the system.type: keyword<br><br>
+Interface name as reported by the system.<br><br>type: keyword<br><br>
 example: `eth0`<br> | extended |
 
 ## Field reuse [_field_reuse]

@@ -31,9 +31,9 @@ applies_to:
 | $$$field-{{ field['dashed_name'] }}$$$[{{ field['flat_name'] }}](#field-{{ field['dashed_name'] }}) |
 {% if field['beta'] -%}
 beta: {{ field['beta'] }}
-{{ field['description']|replace("\n", "<br>") }}
+{{ field['description']|replace("\n", "<br>") }}<br><br>
 {%- else -%}
-{{ field['description']|replace("\n", "<br>") }}
+{{ field['description']|replace("\n", "<br>") }}<br><br>
 {%- endif %}
 {% if field['expected_values'] %}
 Expected values for this field:<br><br>

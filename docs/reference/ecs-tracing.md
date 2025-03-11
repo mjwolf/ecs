@@ -18,13 +18,13 @@ Unlike most field sets in ECS, the tracing fields are *not* nested under the fie
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-span-id$$$[span.id](#field-span-id) |
-Unique identifier of the span within the scope of its trace.<br>A span represents an operation within a transaction, such as a request to another service, or a database query.type: keyword<br><br>
+Unique identifier of the span within the scope of its trace.<br>A span represents an operation within a transaction, such as a request to another service, or a database query.<br><br>type: keyword<br><br>
 example: `3ff9a8981b7ccd5a`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/OTLP-ffdcb2?style=flat[relation,title=otlp,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://github.com/search?q=repo%3Aopen-telemetry%2Fopentelemetry-proto+%22\+span_id+%22&type=code[span_id] | extended |
 | $$$field-trace-id$$$[trace.id](#field-trace-id) |
-Unique identifier of the trace.<br>A trace groups multiple events like transactions that belong together. For example, a user request handled by multiple inter-connected services.type: keyword<br><br>
+Unique identifier of the trace.<br>A trace groups multiple events like transactions that belong together. For example, a user request handled by multiple inter-connected services.<br><br>type: keyword<br><br>
 example: `4bf92f3577b34da6a3ce929d0e0e4736`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/OTLP-ffdcb2?style=flat[relation,title=otlp,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://github.com/search?q=repo%3Aopen-telemetry%2Fopentelemetry-proto+%22\+trace_id+%22&type=code[trace_id] | extended |
 | $$$field-transaction-id$$$[transaction.id](#field-transaction-id) |
-Unique identifier of the transaction within the scope of its trace.<br>A transaction is the highest level of work measured within a service, such as a request to a server.type: keyword<br><br>
+Unique identifier of the transaction within the scope of its trace.<br>A transaction is the highest level of work measured within a service, such as a request to a server.<br><br>type: keyword<br><br>
 example: `00f067aa0ba902b7`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat[relation,title=not-applicable,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] Not applicable. | extended |
 
 

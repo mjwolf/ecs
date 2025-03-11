@@ -16,26 +16,26 @@ Fields related to Windows Registry operations.
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-registry-data-bytes$$$[registry.data.bytes](#field-registry-data-bytes) |
-Original bytes written with base64 encoding.<br>For Windows registry operations, such as SetValueEx and RegQueryValueEx, this corresponds to the data pointed by `lp_data`. This is optional but provides better recoverability and should be populated for REG_BINARY encoded values.type: keyword<br><br>
+Original bytes written with base64 encoding.<br>For Windows registry operations, such as SetValueEx and RegQueryValueEx, this corresponds to the data pointed by `lp_data`. This is optional but provides better recoverability and should be populated for REG_BINARY encoded values.<br><br>type: keyword<br><br>
 example: `ZQBuAC0AVQBTAAAAZQBuAAAAAAA=`<br> | extended |
 | $$$field-registry-data-strings$$$[registry.data.strings](#field-registry-data-strings) |
-Content when writing string types.<br>Populated as an array when writing string data to the registry. For single string registry types (REG_SZ, REG_EXPAND_SZ), this should be an array with one string. For sequences of string with REG_MULTI_SZ, this array will be variable length. For numeric data, such as REG_DWORD and REG_QWORD, this should be populated with the decimal representation (e.g `"1"`).type: wildcard<br><br>
+Content when writing string types.<br>Populated as an array when writing string data to the registry. For single string registry types (REG_SZ, REG_EXPAND_SZ), this should be an array with one string. For sequences of string with REG_MULTI_SZ, this array will be variable length. For numeric data, such as REG_DWORD and REG_QWORD, this should be populated with the decimal representation (e.g `"1"`).<br><br>type: wildcard<br><br>
 Note: This field should contain an array of values.<br>
 example: `["C:\rta\red_ttp\bin\myapp.exe"]`<br> | core |
 | $$$field-registry-data-type$$$[registry.data.type](#field-registry-data-type) |
-Standard registry type for encoding contentstype: keyword<br><br>
+Standard registry type for encoding contents<br><br>type: keyword<br><br>
 example: `REG_SZ`<br> | core |
 | $$$field-registry-hive$$$[registry.hive](#field-registry-hive) |
-Abbreviated name for the hive.type: keyword<br><br>
+Abbreviated name for the hive.<br><br>type: keyword<br><br>
 example: `HKLM`<br> | core |
 | $$$field-registry-key$$$[registry.key](#field-registry-key) |
-Hive-relative path of keys.type: keyword<br><br>
+Hive-relative path of keys.<br><br>type: keyword<br><br>
 example: `SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winword.exe`<br> | core |
 | $$$field-registry-path$$$[registry.path](#field-registry-path) |
-Full path, including hive, key and valuetype: keyword<br><br>
+Full path, including hive, key and value<br><br>type: keyword<br><br>
 example: `HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\winword.exe\Debugger`<br> | core |
 | $$$field-registry-value$$$[registry.value](#field-registry-value) |
-Name of the value written.type: keyword<br><br>
+Name of the value written.<br><br>type: keyword<br><br>
 example: `Debugger`<br> | core |
 
 ## Field reuse [_field_reuse]

@@ -16,43 +16,43 @@ These fields contain information about an installed software package. It contain
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-package-architecture$$$[package.architecture](#field-package-architecture) |
-Package architecture.type: keyword<br><br>
+Package architecture.<br><br>type: keyword<br><br>
 example: `x86_64`<br> | extended |
 | $$$field-package-build-version$$$[package.build_version](#field-package-build-version) |
-Additional information about the build version of the installed package.<br>For example use the commit SHA of a non-released package.type: keyword<br><br>
+Additional information about the build version of the installed package.<br>For example use the commit SHA of a non-released package.<br><br>type: keyword<br><br>
 example: `36f4f7e89dd61b0988b12ee000b98966867710cd`<br> | extended |
 | $$$field-package-checksum$$$[package.checksum](#field-package-checksum) |
-Checksum of the installed package for verification.type: keyword<br><br>
+Checksum of the installed package for verification.<br><br>type: keyword<br><br>
 example: `68b329da9893e34099c7d8ad5cb9c940`<br> | extended |
 | $$$field-package-description$$$[package.description](#field-package-description) |
-Description of the package.type: keyword<br><br>
+Description of the package.<br><br>type: keyword<br><br>
 example: `Open source programming language to build simple/reliable/efficient software.`<br> | extended |
 | $$$field-package-install-scope$$$[package.install_scope](#field-package-install-scope) |
-Indicating how the package was installed, e.g. user-local, global.type: keyword<br><br>
+Indicating how the package was installed, e.g. user-local, global.<br><br>type: keyword<br><br>
 example: `global`<br> | extended |
 | $$$field-package-installed$$$[package.installed](#field-package-installed) |
-Time when package was installed.type: date<br><br>
+Time when package was installed.<br><br>type: date<br><br>
  | extended |
 | $$$field-package-license$$$[package.license](#field-package-license) |
-License under which the package was released.<br>Use a short name, e.g. the license identifier from SPDX License List where possible (https://spdx.org/licenses/).type: keyword<br><br>
+License under which the package was released.<br>Use a short name, e.g. the license identifier from SPDX License List where possible (https://spdx.org/licenses/).<br><br>type: keyword<br><br>
 example: `Apache License 2.0`<br> | extended |
 | $$$field-package-name$$$[package.name](#field-package-name) |
-Package nametype: keyword<br><br>
+Package name<br><br>type: keyword<br><br>
 example: `go`<br> | extended |
 | $$$field-package-path$$$[package.path](#field-package-path) |
-Path where the package is installed.type: keyword<br><br>
+Path where the package is installed.<br><br>type: keyword<br><br>
 example: `/usr/local/Cellar/go/1.12.9/`<br> | extended |
 | $$$field-package-reference$$$[package.reference](#field-package-reference) |
-Home page or reference URL of the software in this package, if available.type: keyword<br><br>
+Home page or reference URL of the software in this package, if available.<br><br>type: keyword<br><br>
 example: `https://golang.org`<br> | extended |
 | $$$field-package-size$$$[package.size](#field-package-size) |
-Package size in bytes.type: long<br><br>
+Package size in bytes.<br><br>type: long<br><br>
 example: `62231`<br> | extended |
 | $$$field-package-type$$$[package.type](#field-package-type) |
-Type of package.<br>This should contain the package file type, rather than the package manager name. Examples: rpm, dpkg, brew, npm, gem, nupkg, jar.type: keyword<br><br>
+Type of package.<br>This should contain the package file type, rather than the package manager name. Examples: rpm, dpkg, brew, npm, gem, nupkg, jar.<br><br>type: keyword<br><br>
 example: `rpm`<br> | extended |
 | $$$field-package-version$$$[package.version](#field-package-version) |
-Package versiontype: keyword<br><br>
+Package version<br><br>type: keyword<br><br>
 example: `1.12.9`<br> | extended |
 
 

@@ -18,37 +18,37 @@ This geolocation information can be derived from techniques such as Geo IP, or b
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-geo-city-name$$$[geo.city_name](#field-geo-city-name) |
-City name.type: keyword<br><br>
+City name.<br><br>type: keyword<br><br>
 example: `Montreal`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-locality-name[geo.locality.name] | core |
 | $$$field-geo-continent-code$$$[geo.continent_code](#field-geo-continent-code) |
-Two-letter code representing continent's name.type: keyword<br><br>
+Two-letter code representing continent's name.<br><br>type: keyword<br><br>
 example: `NA`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-continent-code[geo.continent.code] | core |
 | $$$field-geo-continent-name$$$[geo.continent_name](#field-geo-continent-name) |
-Name of the continent.type: keyword<br><br>
+Name of the continent.<br><br>type: keyword<br><br>
 example: `North America`<br> | core |
 | $$$field-geo-country-iso-code$$$[geo.country_iso_code](#field-geo-country-iso-code) |
-Country ISO code.type: keyword<br><br>
+Country ISO code.<br><br>type: keyword<br><br>
 example: `CA`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-country-iso-code[geo.country.iso_code] | core |
 | $$$field-geo-country-name$$$[geo.country_name](#field-geo-country-name) |
-Country name.type: keyword<br><br>
+Country name.<br><br>type: keyword<br><br>
 example: `Canada`<br> | core |
 | $$$field-geo-location$$$[geo.location](#field-geo-location) |
-Longitude and latitude.type: geo_point<br><br>
+Longitude and latitude.<br><br>type: geo_point<br><br>
 example: `{ "lon": -73.614830, "lat": 45.505918 }`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/related-efc20d?style=flat[relation,title=related,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-location-lat[geo.location.lat]image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/related-efc20d?style=flat[relation,title=related,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-location-lon[geo.location.lon] | core |
 | $$$field-geo-name$$$[geo.name](#field-geo-name) |
-User-defined description of a location, at the level of granularity they care about.<br>Could be the name of their data centers, the floor number, if this describes a local physical entity, city names.<br>Not typically used in automated geolocation.type: keyword<br><br>
+User-defined description of a location, at the level of granularity they care about.<br>Could be the name of their data centers, the floor number, if this describes a local physical entity, city names.<br>Not typically used in automated geolocation.<br><br>type: keyword<br><br>
 example: `boston-dc`<br> | extended |
 | $$$field-geo-postal-code$$$[geo.postal_code](#field-geo-postal-code) |
-Postal code associated with the location.<br>Values appropriate for this field may also be known as a postcode or ZIP code and will vary widely from country to country.type: keyword<br><br>
+Postal code associated with the location.<br>Values appropriate for this field may also be known as a postcode or ZIP code and will vary widely from country to country.<br><br>type: keyword<br><br>
 example: `94040`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-postal-code[geo.postal_code] | core |
 | $$$field-geo-region-iso-code$$$[geo.region_iso_code](#field-geo-region-iso-code) |
-Region ISO code.type: keyword<br><br>
+Region ISO code.<br><br>type: keyword<br><br>
 example: `CA-QC`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/geo/#geo-region-iso-code[geo.region.iso_code] | core |
 | $$$field-geo-region-name$$$[geo.region_name](#field-geo-region-name) |
-Region name.type: keyword<br><br>
+Region name.<br><br>type: keyword<br><br>
 example: `Quebec`<br> | core |
 | $$$field-geo-timezone$$$[geo.timezone](#field-geo-timezone) |
-The time zone of the location, such as IANA time zone name.type: keyword<br><br>
+The time zone of the location, such as IANA time zone name.<br><br>type: keyword<br><br>
 example: `America/Argentina/Buenos_Aires`<br> | core |
 
 ## Field reuse [_field_reuse]

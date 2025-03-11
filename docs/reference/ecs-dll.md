@@ -26,18 +26,18 @@ Many operating systems refer to "shared code libraries" with different names, bu
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-dll-name$$$[dll.name](#field-dll-name) |
-Name of the library.<br>This generally maps to the name of the file on disk.type: keyword<br><br>
+Name of the library.<br>This generally maps to the name of the file on disk.<br><br>type: keyword<br><br>
 example: `kernel32.dll`<br> | core |
 | $$$field-dll-origin-referrer-url$$$[dll.origin_referrer_url](#field-dll-origin-referrer-url) |
 beta: This field is beta and subject to change.
-The URL of the webpage that linked to the dll file.type: keyword<br><br>
+The URL of the webpage that linked to the dll file.<br><br>type: keyword<br><br>
 example: `http://example.com/article1.html`<br> | extended |
 | $$$field-dll-origin-url$$$[dll.origin_url](#field-dll-origin-url) |
 beta: This field is beta and subject to change.
-The URL where the dll file is hosted.type: keyword<br><br>
+The URL where the dll file is hosted.<br><br>type: keyword<br><br>
 example: `http://example.com/files/example.dll`<br> | extended |
 | $$$field-dll-path$$$[dll.path](#field-dll-path) |
-Full file path of the library.type: keyword<br><br>
+Full file path of the library.<br><br>type: keyword<br><br>
 example: `C:\Windows\System32\kernel32.dll`<br> | extended |
 
 

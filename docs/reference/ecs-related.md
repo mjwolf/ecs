@@ -20,19 +20,19 @@ A concrete example is IP addresses, which can be under host, observer, source, d
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-related-hash$$$[related.hash](#field-related-hash) |
-All the hashes seen on your event. Populating this field, then using it to search for hashes can help in situations where you're unsure what the hash algorithm is (and therefore which key name to search).type: keyword<br><br>
+All the hashes seen on your event. Populating this field, then using it to search for hashes can help in situations where you're unsure what the hash algorithm is (and therefore which key name to search).<br><br>type: keyword<br><br>
 Note: This field should contain an array of values.<br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat[relation,title=not-applicable,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] Not applicable. | extended |
 | $$$field-related-hosts$$$[related.hosts](#field-related-hosts) |
-All hostnames or other host identifiers seen on your event. Example identifiers include FQDNs, domain names, workstation names, or aliases.type: keyword<br><br>
+All hostnames or other host identifiers seen on your event. Example identifiers include FQDNs, domain names, workstation names, or aliases.<br><br>type: keyword<br><br>
 Note: This field should contain an array of values.<br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat[relation,title=not-applicable,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] Not applicable. | extended |
 | $$$field-related-ip$$$[related.ip](#field-related-ip) |
-All of the IPs seen on your event.type: ip<br><br>
+All of the IPs seen on your event.<br><br>type: ip<br><br>
 Note: This field should contain an array of values.<br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat[relation,title=not-applicable,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] Not applicable. | extended |
 | $$$field-related-user$$$[related.user](#field-related-user) |
-All the user names or other user identifiers seen on the event.type: keyword<br><br>
+All the user names or other user identifiers seen on the event.<br><br>type: keyword<br><br>
 Note: This field should contain an array of values.<br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat[relation,title=not-applicable,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] Not applicable. | extended |
 

@@ -18,21 +18,21 @@ Use them for errors that happen while fetching events or in cases where the even
 | Field | Description | Level |
 | --- | --- | --- |
 | $$$field-error-code$$$[error.code](#field-error-code) |
-Error code describing the error.type: keyword<br><br>
+Error code describing the error.<br><br>type: keyword<br><br>
  | core |
 | $$$field-error-id$$$[error.id](#field-error-id) |
-Unique identifier for the error.type: keyword<br><br>
+Unique identifier for the error.<br><br>type: keyword<br><br>
  | core |
 | $$$field-error-message$$$[error.message](#field-error-message) |
-Error message.type: match_only_text<br><br>
+Error message.<br><br>type: match_only_text<br><br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/exception/#exception-message[exception.message] | core |
 | $$$field-error-stack-trace$$$[error.stack_trace](#field-error-stack-trace) |
-The stack trace of this error in plain text.type: wildcard<br><br>
+The stack trace of this error in plain text.<br><br>type: wildcard<br><br>
 Multi-fields:<br><br>
 error.stack_trace.text (type: match_only_text)<br>
 image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/equivalent-1ba9f5?style=flat[relation,title=equivalent,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/exception/#exception-stacktrace[exception.stacktrace] | extended |
 | $$$field-error-type$$$[error.type](#field-error-type) |
-The type of the error, for example the class name of the exception.type: keyword<br><br>
+The type of the error, for example the class name of the exception.<br><br>type: keyword<br><br>
 example: `java.lang.NullPointerException`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/error/#error-type[error.type] | extended |
 
 
