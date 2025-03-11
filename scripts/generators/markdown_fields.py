@@ -35,10 +35,10 @@ def generate(nested, docs_only_nested, ecs_generated_version, semconv_version, o
         semconv_version = semconv_version[1:]
 
     save_markdown(path.join(out_dir, 'index.md'), page_index(ecs_generated_version))
-    save_markdown(path.join(otel_docs_dir, 'otel-fields-mapping.md'),
-                  page_otel_mapping(nested, ecs_generated_version, semconv_version))
-    save_markdown(path.join(otel_docs_dir, 'otel-mapping-summary.md'),
-                  page_otel_summary(otel_generator, nested, ecs_generated_version, semconv_version))
+    save_markdown(path.join(otel_docs_dir, 'ecs-otel-alignment-details.md'),
+                  page_otel_alignment_details(nested, ecs_generated_version, semconv_version))
+    save_markdown(path.join(otel_docs_dir, 'ecs-otel-alignment-overview.md'),
+                  page_otel_alignment_overview(otel_generator, nested, ecs_generated_version, semconv_version))
     fieldsets = ecs_helpers.dict_sorted_by_keys(nested, ['group', 'name'])
     for fieldset in fieldsets:
         save_markdown(path.join(out_dir, f'ecs-{fieldset["name"]}.md'), page_fieldset(fieldset, nested, ecs_generated_version))
@@ -213,8 +213,8 @@ def generate_field_details_page(fieldset):
 # OTel Fields Mapping Page
 
 
-@templated('otel_mapping.j2')
-def page_otel_mapping(nested, ecs_generated_version, semconv_version):
+@templated('otel_alignment_details.j2')
+def page_otel_alignment_details(nested, ecs_generated_version, semconv_version):
     fieldsets = [deepcopy(fieldset) for fieldset in ecs_helpers.dict_sorted_by_keys(
         nested, ['group', 'name']) if is_eligable_for_otel_mapping(fieldset)]
     for fieldset in fieldsets:
@@ -235,8 +235,8 @@ def is_eligable_for_otel_mapping(fieldset):
 # OTel Mapping Summary Page
 
 
-@templated('otel_summary.j2')
-def page_otel_summary(otel_generator, nested, ecs_generated_version, semconv_version):
+@templated('otel_alignment_overview.j2')
+def page_otel_alignment_overview(otel_generator, nested, ecs_generated_version, semconv_version):
     fieldsets = ecs_helpers.dict_sorted_by_keys(nested, ['group', 'name'])
     summaries = otel_generator.get_mapping_summaries(fieldsets)
     return dict(summaries=summaries,
