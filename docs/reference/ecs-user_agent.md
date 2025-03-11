@@ -33,11 +33,8 @@ Version of the user agent.<br><br>type: keyword<br><br>
 example: `12.0`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/user_agent/#user-agent-version[user_agent.version] | extended |
 
 
-### Field sets that can be nested under User agent [ecs--nestings]
+### Field sets that can be nested under User agent [ecs-user_agent-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

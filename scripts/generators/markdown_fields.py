@@ -110,7 +110,7 @@ def check_for_usage_doc(fieldset_name, usage_file_list=ecs_helpers.usage_doc_fil
 
     :param fieldset_name: The name of the target fieldset
     """
-    return f"{fieldset_name}.md" in usage_file_list
+    return f"ecs-{fieldset_name}-usage.md" in usage_file_list
 
 
 def templated(template_name):

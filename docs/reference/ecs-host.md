@@ -75,11 +75,8 @@ Seconds the host has been up.<br><br>type: long<br><br>
 example: `1325`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/metric-cb00cb?style=flat[relation,title=metric,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://github.com/search?q=repo%3Aopen-telemetry%2Fsemantic-conventions+%22%3C%21--\+semconv+metric.system.uptime+--%3E%22&type=code[system.uptime] | extended |
 
 
-### Field sets that can be nested under Host [ecs--nestings]
+### Field sets that can be nested under Host [ecs-host-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

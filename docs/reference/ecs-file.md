@@ -107,11 +107,8 @@ The `file` fields are expected to be nested at:
 Note also that the `file` fields may be used directly at the root of the events.
 
 
-### Field sets that can be nested under File [ecs--nestings]
+### Field sets that can be nested under File [ecs-file-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

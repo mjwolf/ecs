@@ -240,11 +240,8 @@ Note: This field should contain an array of values.<br>
 example: `https://attack.mitre.org/techniques/T1059/001/`<br> | extended |
 
 
-### Field sets that can be nested under Threat [ecs--nestings]
+### Field sets that can be nested under Threat [ecs-threat-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 
@@ -296,3 +293,8 @@ Fields that let you store URLs in various forms.
 | [x509](#ecs-x509) |
 
 These fields contain x509 certificate metadata.
+
+### Threat field usage
+
+For usage and examples of the `threat` fields, see [Threat fields usage and examples](/reference/ecs-threat-usage.md).
+

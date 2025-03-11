@@ -154,11 +154,8 @@ The `process` fields are expected to be nested at:
 Note also that the `process` fields may be used directly at the root of the events.
 
 
-### Field sets that can be nested under Process [ecs--nestings]
+### Field sets that can be nested under Process [ecs-process-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

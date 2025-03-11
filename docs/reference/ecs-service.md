@@ -63,11 +63,8 @@ The `service` fields are expected to be nested at:
 Note also that the `service` fields may be used directly at the root of the events.
 
 
-### Field sets that can be nested under Service [ecs--nestings]
+### Field sets that can be nested under Service [ecs-service-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 
@@ -81,3 +78,8 @@ Describes the origin service in case of an incoming request or event.
 
 **beta:** Reusing the `service` fields in this location is currently considered beta.
 Describes the target service in case of an outgoing request or event.
+
+### Service field usage
+
+For usage and examples of the `service` fields, see [Service fields usage and examples](/reference/ecs-service-usage.md).
+

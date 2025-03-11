@@ -59,11 +59,8 @@ The `cloud` fields are expected to be nested at:
 Note also that the `cloud` fields may be used directly at the root of the events.
 
 
-### Field sets that can be nested under Cloud [ecs--nestings]
+### Field sets that can be nested under Cloud [ecs-cloud-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 
@@ -75,3 +72,8 @@ Provides the cloud information of the origin entity in case of an incoming reque
 | [cloud](#ecs-cloud) |
 
 Provides the cloud information of the target entity in case of an outgoing request or event.
+
+### Cloud field usage
+
+For usage and examples of the `cloud` fields, see [Cloud fields usage and examples](/reference/ecs-cloud-usage.md).
+

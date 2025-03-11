@@ -84,11 +84,8 @@ The name of the application that was used to draft and send the original email m
 example: `Spambot v2.5`<br> | extended |
 
 
-### Field sets that can be nested under Email [ecs--nestings]
+### Field sets that can be nested under Email [ecs-email-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

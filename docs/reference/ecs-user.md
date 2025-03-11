@@ -63,11 +63,8 @@ The `user` fields are expected to be nested at:
 Note also that the `user` fields may be used directly at the root of the events.
 
 
-### Field sets that can be nested under User [ecs--nestings]
+### Field sets that can be nested under User [ecs-user-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 
@@ -91,3 +88,8 @@ Fields for describing risk score and level.
 | [user](#ecs-user) |
 
 Targeted user of action taken.
+
+### User field usage
+
+For usage and examples of the `user` fields, see [User fields usage and examples](/reference/ecs-user-usage.md).
+

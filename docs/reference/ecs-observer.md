@@ -60,11 +60,8 @@ Observer version.<br><br>type: keyword<br><br>
  | core |
 
 
-### Field sets that can be nested under Observer [ecs--nestings]
+### Field sets that can be nested under Observer [ecs-observer-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

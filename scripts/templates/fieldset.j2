@@ -97,11 +97,8 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 
 {% if 'nestings' in fieldset -%}
 
-### Field sets that can be nested under {{ fieldset['title'] }} [ecs-{{ fieldset['dashed_name'] }}-nestings]
+### Field sets that can be nested under {{ fieldset['title'] }} [ecs-{{ fieldset['name'] | lower }}-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 
@@ -130,6 +127,6 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 
 ### {{ fieldset['title'] }} field usage
 
-for usage and examples of the `{{ fieldset['name'] }}` fields, see [{{ fieldset['title'] }} fields usage and examples](#ecs-{{ fieldset['name']|replace("_", "-") }}-usage).
+For usage and examples of the `{{ fieldset['name'] }}` fields, see [{{ fieldset['title'] }} fields usage and examples](/reference/ecs-{{ fieldset['name']|replace("_", "-") }}-usage.md).
 
 {% endif %}

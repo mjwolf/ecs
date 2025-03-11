@@ -56,11 +56,8 @@ In the OSI Model this would be the Network Layer. ipv4, ipv6, ipsec, pim, etc<br
 example: `ipv4`<br>image:https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry[OTel Badge] image:https://img.shields.io/badge/match-93c93e?style=flat[relation,title=match,link=ecs-opentelemetry.html#ecs-opentelemetry-relation] https://opentelemetry.io/docs/specs/semconv/attributes-registry/network/#network-type[network.type] | core |
 
 
-### Field sets that can be nested under Network [ecs--nestings]
+### Field sets that can be nested under Network [ecs-network-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 

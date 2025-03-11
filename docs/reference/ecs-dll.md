@@ -41,11 +41,8 @@ Full file path of the library.<br><br>type: keyword<br><br>
 example: `C:\Windows\System32\kernel32.dll`<br> | extended |
 
 
-### Field sets that can be nested under DLL [ecs--nestings]
+### Field sets that can be nested under DLL [ecs-dll-nestings]
 
-::::{tab-set}
-
-:::{tab-item} Field sets
 | Location | Field set | Description |
 |---|---|---|
 
