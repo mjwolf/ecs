@@ -18,9 +18,9 @@ The following table gives an overview of mappings between individual ECS fields 
 {% set row -%}
 {# `ECS` column -#}
 {% if 'original_fieldset' not in field -%}
-| $$$otel-mapping-for-{{ field['dashed_name'] }}$$$[{{ field['flat_name'] }}](/reference/ecs-{{ fieldset['name'] }}.md/#field-{{ field['dashed_name'] }})
+| $$$otel-mapping-for-{{ field['dashed_name'] }}$$$ [{{ field['flat_name'] }}](/reference/ecs-{{ fieldset['name'] }}.md#field-{{ field['dashed_name'] }})
 {%- else -%}
-| $$$otel-mapping-for-{{ field['dashed_name'] }}{{ field ['flat_name'] }}
+| $$$otel-mapping-for-{{ field['dashed_name'] }}$$$ {{ field ['flat_name'] }}
 {%-endif -%}{# if 'original_fieldset' }
 {% if 'beta' in fieldset or 'beta' in field -%}
 {{ '[beta]' }}

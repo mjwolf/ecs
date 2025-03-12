@@ -32,7 +32,7 @@ applies_to:
 {% for field in sorted_fields -%}
 {% if 'original_fieldset' not in field -%}
 {% set row -%}
-| $$$field-{{ field['dashed_name'] }}$$$[{{ field['flat_name'] }}](#field-{{ field['dashed_name'] }}) |
+| $$$field-{{ field['dashed_name'] }}$$$ [{{ field['flat_name'] }}](#field-{{ field['dashed_name'] }}) |
 {% if field['beta'] -%}
 {# referencing non-existant field below keeps leading space -#}
 {{ field['foo'] }} beta: {{ field['beta'] }}
