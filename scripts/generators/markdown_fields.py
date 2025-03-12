@@ -157,7 +157,7 @@ template_loader = jinja2.FileSystemLoader(searchpath=TEMPLATE_DIR)
 template_env = jinja2.Environment(loader=template_loader,
                                   keep_trailing_newline=True,
                                   trim_blocks=True,
-                                  lstrip_blocks=True)
+                                  lstrip_blocks=False)
 
 # Rendering schemas
 
