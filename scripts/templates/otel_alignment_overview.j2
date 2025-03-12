@@ -5,24 +5,11 @@ mapped_pages:
   - https://www.elastic.co/guide/en/ecs/master/ecs-otel-alignment-overview.html
 ---
 
-# OTel Alignment Overview [ecs-otel-alignment-overview]
-
 The following table summarizes the alignment status by namespaces between ECS in version `{{ ecs_generated_version }}`
 and OpenTelemetry semantic conventions in version `{{ semconv_version }}`.
 
-|     |     |
-| --- | --- |
-|  | Number of Fields / Attributes |
-| Namespace | ECS | OTel | ![relation](https://img.shields.io/badge/match-93c93e?style=flat "match") | ![relation](https://img.shields.io/badge/equivalent-1ba9f5?style=flat "equivalent") | ![relation](https://img.shields.io/badge/related-efc20d?style=flat "related") | ![relation](https://img.shields.io/badge/conflict-910000?style=flat "conflict") | ![relation](https://img.shields.io/badge/metric-cb00cb?style=flat "metric") | ![relation](https://img.shields.io/badge/OTLP-ffdcb2?style=flat "OTLP") | ![relation](https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat "na") |
+| Namespace | ECS | OTel | ![match](https://img.shields.io/badge/match-93c93e?style=flat) | ![equivalent](https://img.shields.io/badge/equivalent-1ba9f5?style=flat) | ![related](https://img.shields.io/badge/related-efc20d?style=flat) | ![conflict](https://img.shields.io/badge/conflict-910000?style=flat) | ![metric](https://img.shields.io/badge/metric-cb00cb?style=flat) | ![OTLP](https://img.shields.io/badge/OTLP-ffdcb2?style=flat) | ![n/a](https://img.shields.io/badge/n%2Fa-f2f4fb?style=flat) |
+|-----------|-----|------|--------|------------|---------|----------|--------|------|------|
 {% for summary in summaries %}
-| {{ summary['title'] }}
-^| {{ macros.format_number_with_local_link(summary['nr_plain_ecs_fields'], "ecs-" + summary['namespace'] ) }}
-^| {{ macros.format_number_with_ext_link(summary['nr_otel_fields'], "https://opentelemetry.io/docs/specs/semconv/attributes-registry/" + macros.dashed_name(summary['namespace'])) }}
-^| {{ macros.format_number(summary['nr_matching_fields']) }}
-^| {{ macros.format_number(summary['nr_equivalent_fields']) }}
-^| {{ macros.format_number(summary['nr_related_fields']) }}
-^| {{ macros.format_number(summary['nr_conflicting_fields']) }}
-^| {{ macros.format_number(summary['nr_metric_fields']) }}
-^| {{ macros.format_number(summary['nr_otlp_fields']) }}
-^| {{ macros.format_number(summary['nr_not_applicable_fields']) }}
-{% endfor %}{# for 'summary' -#}
+| {{ summary['title'] }} | [{{ summary['nr_plain_ecs_fields'] }}](#ecs-{{ summary['namespace'] }}) | [{{ summary['nr_otel_fields'] }}](https://opentelemetry.io/docs/specs/semconv/attributes-registry/{{ macros.dashed_name(summary['namespace']) }}) | {{ macros.format_number(summary['nr_matching_fields']) }} | {{ macros.format_number(summary['nr_equivalent_fields']) }} | {{ macros.format_number(summary['nr_related_fields']) }} | {{ macros.format_number(summary['nr_conflicting_fields']) }} | {{ macros.format_number(summary['nr_metric_fields']) }} | {{ macros.format_number(summary['nr_otlp_fields']) }} | {{ macros.format_number(summary['nr_not_applicable_fields']) }} |
+{% endfor %}
