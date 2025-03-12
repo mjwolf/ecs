@@ -34,8 +34,8 @@ This could be a custom hardware appliance or a server that has been configured t
 
 ### Field sets that can be nested under Observer [ecs-observer-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `observer.egress.interface.*` | [interface](/reference/ecs-interface.md) | Fields to describe observer interface information. |
 | `observer.egress.vlan.*` | [vlan](/reference/ecs-vlan.md) | Fields to describe observed VLAN information. |
 | `observer.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |

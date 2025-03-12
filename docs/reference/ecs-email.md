@@ -40,6 +40,6 @@ This field set focuses on the email message header, body, and attachments. Netwo
 
 ### Field sets that can be nested under Email [ecs-email-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `email.attachments.file.hash.*` | [hash](/reference/ecs-hash.md) | Hashes, usually file hashes. |

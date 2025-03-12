@@ -39,8 +39,8 @@ ECS host.* fields should be populated with details about the host on which the e
 
 ### Field sets that can be nested under Host [ecs-host-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `host.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
 | `host.os.*` | [os](/reference/ecs-os.md) | OS fields contain information about the operating system. |
 | `host.risk.*` | [risk](/reference/ecs-risk.md) | Fields for describing risk score and level. |

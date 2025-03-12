@@ -48,7 +48,7 @@ Fields related to a TLS connection. These fields focus on the TLS protocol itsel
 
 ### Field sets that can be nested under TLS [ecs-tls-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `tls.client.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata. |
 | `tls.server.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata. |

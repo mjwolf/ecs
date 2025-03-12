@@ -41,8 +41,8 @@ Note also that the `service` fields may be used directly at the root of the even
 
 ### Field sets that can be nested under Service [ecs-service-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `service.origin.*` | [service](/reference/ecs-service.md) | **beta:** Reusing the `service` fields in this location is currently considered beta. Describes the origin service in case of an incoming request or event. |
 | `service.target.*` | [service](/reference/ecs-service.md) | **beta:** Reusing the `service` fields in this location is currently considered beta. Describes the target service in case of an outgoing request or event. |
 

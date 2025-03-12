@@ -46,8 +46,8 @@ Note also that the `user` fields may be used directly at the root of the events.
 
 ### Field sets that can be nested under User [ecs-user-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `user.changes.*` | [user](/reference/ecs-user.md) | Captures changes made to a user. |
 | `user.effective.*` | [user](/reference/ecs-user.md) | User whose privileges were assumed. |
 | `user.group.*` | [group](/reference/ecs-group.md) | User's group relevant to the event. |

@@ -33,8 +33,8 @@ Destination fields are usually populated in conjunction with source fields. The 
 
 ### Field sets that can be nested under Destination [ecs-destination-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `destination.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix). |
 | `destination.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
 | `destination.user.*` | [user](/reference/ecs-user.md) | Fields to describe the user relevant to the event. |

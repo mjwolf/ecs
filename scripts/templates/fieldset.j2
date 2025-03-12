@@ -43,7 +43,7 @@ applies_to:
 {% if field['expected_values'] %}
 Expected values for this field:<br><br>
 {% for val in field['expected_values'] %}
-- `{{ val }}`<br>
+* `{{ val }}`<br>
 {%- endfor %}
 {%- endif %}
 type: {{ field['type'] }}<br><br>
@@ -103,8 +103,8 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 
 ### Field sets that can be nested under {{ fieldset['title'] }} [ecs-{{ fieldset['name'] | lower }}-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 {% for entry in render_nestings_reuse_section -%}
 {% set row %}
 | `{{ entry['flat_nesting'] }}` | [{{ entry['name'] }}](/reference/ecs-{{ entry['name'] }}.md) |

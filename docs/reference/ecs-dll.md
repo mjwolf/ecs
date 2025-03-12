@@ -33,8 +33,8 @@ Many operating systems refer to "shared code libraries" with different names, bu
 
 ### Field sets that can be nested under DLL [ecs-dll-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `dll.code_signature.*` | [code_signature](/reference/ecs-code_signature.md) | These fields contain information about binary code signatures. |
 | `dll.hash.*` | [hash](/reference/ecs-hash.md) | Hashes, usually file hashes. |
 | `dll.pe.*` | [pe](/reference/ecs-pe.md) | These fields contain Windows Portable Executable (PE) metadata. |

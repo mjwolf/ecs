@@ -54,8 +54,8 @@ Note also that the `file` fields may be used directly at the root of the events.
 
 ### Field sets that can be nested under File [ecs-file-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `file.code_signature.*` | [code_signature](/reference/ecs-code_signature.md) | These fields contain information about binary code signatures. |
 | `file.elf.*` | [elf](/reference/ecs-elf.md) | These fields contain Linux Executable Linkable Format (ELF) metadata. |
 | `file.hash.*` | [hash](/reference/ecs-hash.md) | Hashes, usually file hashes. |

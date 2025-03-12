@@ -25,6 +25,6 @@ They often show up in web service logs coming from the parsed user agent string.
 
 ### Field sets that can be nested under User agent [ecs-user_agent-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `user_agent.os.*` | [os](/reference/ecs-os.md) | OS fields contain information about the operating system. |

@@ -73,8 +73,8 @@ Note also that the `process` fields may be used directly at the root of the even
 
 ### Field sets that can be nested under Process [ecs-process-nestings]
 
-| Location | Field set | Description |
-|---|---|---|
+| Location | Field Set | Description |
+| --- | --- | --- |
 | `process.attested_groups.*` | [group](/reference/ecs-group.md) | **beta:** Reusing the `group` fields in this location is currently considered beta. The externally attested groups based on an external source such as the Kube API.**Note:** This reuse should contain an array of group field set objects. |
 | `process.attested_user.*` | [user](/reference/ecs-user.md) | **beta:** Reusing the `user` fields in this location is currently considered beta. The externally attested user based on an external source such as the Kube API. |
 | `process.code_signature.*` | [code_signature](/reference/ecs-code_signature.md) | These fields contain information about binary code signatures. |
