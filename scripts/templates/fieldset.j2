@@ -43,7 +43,7 @@ applies_to:
 {% if field['expected_values'] %}
 Expected values for this field:<br><br>
 {% for val in field['expected_values'] %}
-* `{{ val }}`<br>
+- `{{ val }}`<br>
 {%- endfor %}
 {%- endif %}
 type: {{ field['type'] }}<br><br>
