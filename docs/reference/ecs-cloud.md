@@ -41,10 +41,10 @@ Note also that the `cloud` fields may be used directly at the root of the events
 
 | Location | Field set | Description |
 |---|---|---|
-| `cloud.origin.*` | [cloud](/reference/ecs-cloud.md) | Provides the cloud information of the origin entity in case of an incoming request or event.
-| `cloud.target.*` | [cloud](/reference/ecs-cloud.md) | Provides the cloud information of the target entity in case of an outgoing request or event.
+| `cloud.origin.*` | [cloud](/reference/ecs-cloud.md) | Provides the cloud information of the origin entity in case of an incoming request or event. |
+| `cloud.target.*` | [cloud](/reference/ecs-cloud.md) | Provides the cloud information of the target entity in case of an outgoing request or event. |
 
-### Cloud field usage
+### Cloud field usage [_cloud_field_usage]
 
-For usage and examples of the `cloud` fields, see [Cloud fields usage and examples](/reference/ecs-cloud-usage.md).
+For usage and examples of the cloud fields, please see the [Cloud fields usage and examples](/reference/ecs-cloud-usage.md) section.
 

@@ -43,10 +43,10 @@ Note also that the `service` fields may be used directly at the root of the even
 
 | Location | Field set | Description |
 |---|---|---|
-| `service.origin.*` | [service](/reference/ecs-service.md) | **beta:** Reusing the `service` fields in this location is currently considered beta. Describes the origin service in case of an incoming request or event.
-| `service.target.*` | [service](/reference/ecs-service.md) | **beta:** Reusing the `service` fields in this location is currently considered beta. Describes the target service in case of an outgoing request or event.
+| `service.origin.*` | [service](/reference/ecs-service.md) | **beta:** Reusing the `service` fields in this location is currently considered beta. Describes the origin service in case of an incoming request or event. |
+| `service.target.*` | [service](/reference/ecs-service.md) | **beta:** Reusing the `service` fields in this location is currently considered beta. Describes the target service in case of an outgoing request or event. |
 
-### Service field usage
+### Service field usage [_service_field_usage]
 
-For usage and examples of the `service` fields, see [Service fields usage and examples](/reference/ecs-service-usage.md).
+For usage and examples of the service fields, please see the [Service fields usage and examples](/reference/ecs-service-usage.md) section.
 

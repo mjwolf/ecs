@@ -50,5 +50,5 @@ Fields related to a TLS connection. These fields focus on the TLS protocol itsel
 
 | Location | Field set | Description |
 |---|---|---|
-| `tls.client.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata.
-| `tls.server.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata.
+| `tls.client.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata. |
+| `tls.server.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata. |

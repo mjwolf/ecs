@@ -88,20 +88,20 @@ These fields are for users to classify alerts from all of their sources (e.g. ID
 
 | Location | Field set | Description |
 |---|---|---|
-| `threat.enrichments.indicator.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix).
-| `threat.enrichments.indicator.file.*` | [file](/reference/ecs-file.md) | Fields describing files.
-| `threat.enrichments.indicator.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location.
-| `threat.enrichments.indicator.registry.*` | [registry](/reference/ecs-registry.md) | Fields related to Windows Registry operations.
-| `threat.enrichments.indicator.url.*` | [url](/reference/ecs-url.md) | Fields that let you store URLs in various forms.
-| `threat.enrichments.indicator.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata.
-| `threat.indicator.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix).
-| `threat.indicator.file.*` | [file](/reference/ecs-file.md) | Fields describing files.
-| `threat.indicator.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location.
-| `threat.indicator.registry.*` | [registry](/reference/ecs-registry.md) | Fields related to Windows Registry operations.
-| `threat.indicator.url.*` | [url](/reference/ecs-url.md) | Fields that let you store URLs in various forms.
-| `threat.indicator.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata.
+| `threat.enrichments.indicator.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix). |
+| `threat.enrichments.indicator.file.*` | [file](/reference/ecs-file.md) | Fields describing files. |
+| `threat.enrichments.indicator.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
+| `threat.enrichments.indicator.registry.*` | [registry](/reference/ecs-registry.md) | Fields related to Windows Registry operations. |
+| `threat.enrichments.indicator.url.*` | [url](/reference/ecs-url.md) | Fields that let you store URLs in various forms. |
+| `threat.enrichments.indicator.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata. |
+| `threat.indicator.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix). |
+| `threat.indicator.file.*` | [file](/reference/ecs-file.md) | Fields describing files. |
+| `threat.indicator.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
+| `threat.indicator.registry.*` | [registry](/reference/ecs-registry.md) | Fields related to Windows Registry operations. |
+| `threat.indicator.url.*` | [url](/reference/ecs-url.md) | Fields that let you store URLs in various forms. |
+| `threat.indicator.x509.*` | [x509](/reference/ecs-x509.md) | These fields contain x509 certificate metadata. |
 
-### Threat field usage
+### Threat field usage [_threat_field_usage]
 
-For usage and examples of the `threat` fields, see [Threat fields usage and examples](/reference/ecs-threat-usage.md).
+For usage and examples of the threat fields, please see the [Threat fields usage and examples](/reference/ecs-threat-usage.md) section.
 

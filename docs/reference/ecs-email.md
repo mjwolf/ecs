@@ -42,4 +42,4 @@ This field set focuses on the email message header, body, and attachments. Netwo
 
 | Location | Field set | Description |
 |---|---|---|
-| `email.attachments.file.hash.*` | [hash](/reference/ecs-hash.md) | Hashes, usually file hashes.
+| `email.attachments.file.hash.*` | [hash](/reference/ecs-hash.md) | Hashes, usually file hashes. |

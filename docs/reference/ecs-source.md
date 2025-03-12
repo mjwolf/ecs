@@ -43,6 +43,6 @@ Note also that the `source` fields may be used directly at the root of the event
 
 | Location | Field set | Description |
 |---|---|---|
-| `source.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix).
-| `source.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location.
-| `source.user.*` | [user](/reference/ecs-user.md) | Fields to describe the user relevant to the event.
+| `source.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix). |
+| `source.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
+| `source.user.*` | [user](/reference/ecs-user.md) | Fields to describe the user relevant to the event. |

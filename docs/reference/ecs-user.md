@@ -48,13 +48,13 @@ Note also that the `user` fields may be used directly at the root of the events.
 
 | Location | Field set | Description |
 |---|---|---|
-| `user.changes.*` | [user](/reference/ecs-user.md) | Captures changes made to a user.
-| `user.effective.*` | [user](/reference/ecs-user.md) | User whose privileges were assumed.
-| `user.group.*` | [group](/reference/ecs-group.md) | User's group relevant to the event.
-| `user.risk.*` | [risk](/reference/ecs-risk.md) | Fields for describing risk score and level.
-| `user.target.*` | [user](/reference/ecs-user.md) | Targeted user of action taken.
+| `user.changes.*` | [user](/reference/ecs-user.md) | Captures changes made to a user. |
+| `user.effective.*` | [user](/reference/ecs-user.md) | User whose privileges were assumed. |
+| `user.group.*` | [group](/reference/ecs-group.md) | User's group relevant to the event. |
+| `user.risk.*` | [risk](/reference/ecs-risk.md) | Fields for describing risk score and level. |
+| `user.target.*` | [user](/reference/ecs-user.md) | Targeted user of action taken. |
 
-### User field usage
+### User field usage [_user_field_usage]
 
-For usage and examples of the `user` fields, see [User fields usage and examples](/reference/ecs-user-usage.md).
+For usage and examples of the user fields, please see the [User fields usage and examples](/reference/ecs-user-usage.md) section.
 

@@ -117,15 +117,15 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 **Note:** This reuse should contain an array of {{ entry['name'] }} field set objects.
 {% endif -%}
 {% endset %}
-{{ row | replace("\n", "") }}
+{{ row | replace("\n", "") }} |
 {% endfor -%}
 
 {% endif %}
 
 {%- if usage_doc %}
 
-### {{ fieldset['title'] }} field usage
+### {{ fieldset['title'] }} field usage [_{{ fieldset['name'] }}_field_usage]
 
-For usage and examples of the `{{ fieldset['name'] }}` fields, see [{{ fieldset['title'] }} fields usage and examples](/reference/ecs-{{ fieldset['name']|replace("_", "-") }}-usage.md).
+For usage and examples of the {{ fieldset['name'] }} fields, please see the [{{ fieldset['title'] }} fields usage and examples](/reference/ecs-{{ fieldset['name']|replace("_", "-") }}-usage.md) section.
 
 {% endif %}

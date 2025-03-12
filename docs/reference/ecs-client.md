@@ -37,6 +37,6 @@ Client / server representations can add semantic context to an exchange, which i
 
 | Location | Field set | Description |
 |---|---|---|
-| `client.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix).
-| `client.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location.
-| `client.user.*` | [user](/reference/ecs-user.md) | Fields to describe the user relevant to the event.
+| `client.as.*` | [as](/reference/ecs-as.md) | Fields describing an Autonomous System (Internet routing prefix). |
+| `client.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
+| `client.user.*` | [user](/reference/ecs-user.md) | Fields to describe the user relevant to the event. |

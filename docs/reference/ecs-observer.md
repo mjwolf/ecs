@@ -36,9 +36,9 @@ This could be a custom hardware appliance or a server that has been configured t
 
 | Location | Field set | Description |
 |---|---|---|
-| `observer.egress.interface.*` | [interface](/reference/ecs-interface.md) | Fields to describe observer interface information.
-| `observer.egress.vlan.*` | [vlan](/reference/ecs-vlan.md) | Fields to describe observed VLAN information.
-| `observer.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location.
-| `observer.ingress.interface.*` | [interface](/reference/ecs-interface.md) | Fields to describe observer interface information.
-| `observer.ingress.vlan.*` | [vlan](/reference/ecs-vlan.md) | Fields to describe observed VLAN information.
-| `observer.os.*` | [os](/reference/ecs-os.md) | OS fields contain information about the operating system.
+| `observer.egress.interface.*` | [interface](/reference/ecs-interface.md) | Fields to describe observer interface information. |
+| `observer.egress.vlan.*` | [vlan](/reference/ecs-vlan.md) | Fields to describe observed VLAN information. |
+| `observer.geo.*` | [geo](/reference/ecs-geo.md) | Fields describing a location. |
+| `observer.ingress.interface.*` | [interface](/reference/ecs-interface.md) | Fields to describe observer interface information. |
+| `observer.ingress.vlan.*` | [vlan](/reference/ecs-vlan.md) | Fields to describe observed VLAN information. |
+| `observer.os.*` | [os](/reference/ecs-os.md) | OS fields contain information about the operating system. |
