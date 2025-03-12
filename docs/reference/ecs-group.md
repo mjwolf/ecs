@@ -15,7 +15,7 @@ The group fields are meant to represent groups that are relevant to the event.
 
 | Field | Description | Level |
 | --- | --- | --- |
-| $$$field-group-domain$$$[group.domain](#field-group-domain) | Name of the directory the group is a member of.<br>For example, an LDAP or Active Directory domain name.<br><br>type: keyword<br><br> | extended |
+| $$$field-group-domain$$$[group.domain](#field-group-domain) | Name of the directory the group is a member of.<br><br>For example, an LDAP or Active Directory domain name.<br><br>type: keyword<br><br> | extended |
 | $$$field-group-id$$$[group.id](#field-group-id) | Unique identifier for the group on the system/platform.<br><br>type: keyword<br><br> | extended |
 | $$$field-group-name$$$[group.name](#field-group-name) | Name of the group.<br><br>type: keyword<br><br> | extended |
 

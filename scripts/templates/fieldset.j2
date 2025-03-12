@@ -36,9 +36,9 @@ applies_to:
 {% if field['beta'] -%}
 {# referencing non-existant field below keeps leading space -#}
 {{ field['foo'] }} beta: {{ field['beta'] }}
-{{ field['description']|replace("\n", "<br>") }}<br><br>
+{{ field['description']|replace("\n", "<br><br>") }}<br><br>
 {%- else -%}
-{{ field['foo'] }} {{ field['description']|replace("\n", "<br>") }}<br><br>
+{{ field['foo'] }} {{ field['description']|replace("\n", "<br><br>") }}<br><br>
 {%- endif %}
 {% if field['expected_values'] %}
 Expected values for this field:<br><br>
@@ -50,11 +50,11 @@ type: {{ field['type'] }}<br><br>
 {% if 'multi_fields' in field -%}
 Multi-fields:<br><br>
 {% for mf in field['multi_fields'] -%}
- {{ mf['flat_name'] }} (type: {{ mf['type'] }})<br>
+ {{ mf['flat_name'] }} (type: {{ mf['type'] }})<br><br>
 {% endfor %}
 {% endif %}
 {% if 'array' in field['normalize'] -%}
-**Note**: This field should contain an array of values.<br>
+**Note**: This field should contain an array of values.<br><br>
 {% endif %}
 {% if 'allowed_values' in field %}
 **Important:** The field value must be one of the following:<br><br>
