@@ -35,8 +35,7 @@ applies_to:
 | $$$field-{{ field['dashed_name'] }}$$$ [{{ field['flat_name'] }}](#field-{{ field['dashed_name'] }}) |
 {% if field['beta'] -%}
 {# referencing non-existant field below keeps leading space -#}
-{{ field['foo'] }} beta: {{ field['beta'] }}
-{{ field['description']|replace("\n", "<br><br>") }}<br><br>
+{{ field['foo'] }} _{{ field['beta'] }}_ {{ field['description']|replace("\n", "<br><br>") }}<br><br>
 {%- else -%}
 {{ field['foo'] }} {{ field['description']|replace("\n", "<br><br>") }}<br><br>
 {%- endif %}
@@ -109,7 +108,7 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 {% set row %}
 | `{{ entry['flat_nesting'] }}` | [{{ entry['name'] }}](/reference/ecs-{{ entry['name'] }}.md) |
 {% if entry['beta'] -%}
-{{ entry['foo'] }} **beta:** {{ entry['beta'] }} {{ entry['short'] }}
+{{ entry['foo'] }} _{{ entry['beta'] }}_ {{ entry['short'] }}
 {%- else %}
 {{ entry['foo'] }} {{ entry['short'] }}
 {%- endif %}

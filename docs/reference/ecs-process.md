@@ -75,8 +75,8 @@ Note also that the `process` fields may be used directly at the root of the even
 
 | Location | Field Set | Description |
 | --- | --- | --- |
-| `process.attested_groups.*` | [group](/reference/ecs-group.md) | **beta:** Reusing the `group` fields in this location is currently considered beta. The externally attested groups based on an external source such as the Kube API.**Note:** This reuse should contain an array of group field set objects. |
-| `process.attested_user.*` | [user](/reference/ecs-user.md) | **beta:** Reusing the `user` fields in this location is currently considered beta. The externally attested user based on an external source such as the Kube API. |
+| `process.attested_groups.*` | [group](/reference/ecs-group.md) | _Reusing the `group` fields in this location is currently considered beta._ The externally attested groups based on an external source such as the Kube API.**Note:** This reuse should contain an array of group field set objects. |
+| `process.attested_user.*` | [user](/reference/ecs-user.md) | _Reusing the `user` fields in this location is currently considered beta._ The externally attested user based on an external source such as the Kube API. |
 | `process.code_signature.*` | [code_signature](/reference/ecs-code_signature.md) | These fields contain information about binary code signatures. |
 | `process.elf.*` | [elf](/reference/ecs-elf.md) | These fields contain Linux Executable Linkable Format (ELF) metadata. |
 | `process.entry_leader.*` | [process](/reference/ecs-process.md) | First process from terminal or remote access via SSH, SSM, etc OR a service directly started by the init process. |
@@ -86,14 +86,14 @@ Note also that the `process` fields may be used directly at the root of the even
 | `process.group.*` | [group](/reference/ecs-group.md) | The effective group (egid). |
 | `process.group_leader.*` | [process](/reference/ecs-process.md) | Information about the process group leader. In some cases this may be the same as the top level process. |
 | `process.hash.*` | [hash](/reference/ecs-hash.md) | Hashes, usually file hashes. |
-| `process.macho.*` | [macho](/reference/ecs-macho.md) | **beta:** This field reuse is beta and subject to change. These fields contain Mac OS Mach Object file format (Mach-O) metadata. |
+| `process.macho.*` | [macho](/reference/ecs-macho.md) | _This field reuse is beta and subject to change._ These fields contain Mac OS Mach Object file format (Mach-O) metadata. |
 | `process.parent.*` | [process](/reference/ecs-process.md) | Information about the parent process. |
 | `process.parent.group_leader.*` | [process](/reference/ecs-process.md) | Information about the parent's process group leader. Only pid, start and entity_id fields are set. |
 | `process.pe.*` | [pe](/reference/ecs-pe.md) | These fields contain Windows Portable Executable (PE) metadata. |
 | `process.previous.*` | [process](/reference/ecs-process.md) | An array of previous executions for the process, including the initial fork. Only executable and args are set.**Note:** This reuse should contain an array of process field set objects. |
 | `process.real_group.*` | [group](/reference/ecs-group.md) | The real group (rgid). |
 | `process.real_user.*` | [user](/reference/ecs-user.md) | The real user (ruid). Identifies the real owner of the process. |
-| `process.responsible.*` | [process](/reference/ecs-process.md) | **beta:** This field is beta and subject to change. Responsible process in macOS tracks the originating process of an app, key for understanding permissions and hierarchy. |
+| `process.responsible.*` | [process](/reference/ecs-process.md) | _This field is beta and subject to change._ Responsible process in macOS tracks the originating process of an app, key for understanding permissions and hierarchy. |
 | `process.saved_group.*` | [group](/reference/ecs-group.md) | The saved group (sgid). |
 | `process.saved_user.*` | [user](/reference/ecs-user.md) | The saved user (suid). |
 | `process.session_leader.*` | [process](/reference/ecs-process.md) | Often the same as entry_leader. When it differs, it represents a session started within another session. e.g. using tmux |
