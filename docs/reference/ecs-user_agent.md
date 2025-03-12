@@ -28,4 +28,4 @@ They often show up in web service logs coming from the parsed user agent string.
 
 | Location | Field set | Description |
 |---|---|---|
-| `user_agent.os.*` || [os](/reference/ecs-os.md) |OS fields contain information about the operating system.
+| `user_agent.os.*`| [os](/reference/ecs-os.md) |OS fields contain information about the operating system.

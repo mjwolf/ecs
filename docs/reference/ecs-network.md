@@ -36,5 +36,5 @@ The network.* fields should be populated with details about the network activity
 
 | Location | Field set | Description |
 |---|---|---|
-| `network.inner.vlan.*` || [vlan](/reference/ecs-vlan.md) |Fields to describe observed VLAN information.
-| `network.vlan.*` || [vlan](/reference/ecs-vlan.md) |Fields to describe observed VLAN information.
+| `network.inner.vlan.*`| [vlan](/reference/ecs-vlan.md) |Fields to describe observed VLAN information.
+| `network.vlan.*`| [vlan](/reference/ecs-vlan.md) |Fields to describe observed VLAN information.

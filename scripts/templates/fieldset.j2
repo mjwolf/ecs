@@ -107,7 +107,7 @@ Note also that the `{{ fieldset['name'] }}` fields are not expected to be used d
 |---|---|---|
 {% for entry in render_nestings_reuse_section -%}
 {% set row %}
-| `{{ entry['flat_nesting'] }}` |
+| `{{ entry['flat_nesting'] }}`
 | [{{ entry['name'] }}](/reference/ecs-{{ entry['name'] }}.md) |
 {% if entry['beta'] -%}
 **beta:** {{ entry['beta'] }}

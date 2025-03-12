@@ -36,6 +36,6 @@ Destination fields are usually populated in conjunction with source fields. The 
 
 | Location | Field set | Description |
 |---|---|---|
-| `destination.as.*` || [as](/reference/ecs-as.md) |Fields describing an Autonomous System (Internet routing prefix).
-| `destination.geo.*` || [geo](/reference/ecs-geo.md) |Fields describing a location.
-| `destination.user.*` || [user](/reference/ecs-user.md) |Fields to describe the user relevant to the event.
+| `destination.as.*`| [as](/reference/ecs-as.md) |Fields describing an Autonomous System (Internet routing prefix).
+| `destination.geo.*`| [geo](/reference/ecs-geo.md) |Fields describing a location.
+| `destination.user.*`| [user](/reference/ecs-user.md) |Fields to describe the user relevant to the event.

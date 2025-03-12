@@ -24,7 +24,7 @@ Fields can have one entry or multiple entries. If a user has more than one id, p
 | $$$field-user-hash$$$[user.hash](#field-user-hash) |Unique user hash to correlate information for a user in anonymized form.<br>Useful if `user.id` or `user.name` contain confidential information and cannot be used.<br><br>type: keyword<br><br><br>![OTel Badge](https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry) [![match](https://img.shields.io/badge/match-93c93e?style=flat)](/reference/ecs-opentelemetry.md#ecs-opentelemetry-relation) [user.hash](https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-hash)| extended |
 | $$$field-user-id$$$[user.id](#field-user-id) |Unique identifier of the user.<br><br>type: keyword<br><br>example: `S-1-5-21-202424912787-2692429404-2351956786-1000`<br><br>![OTel Badge](https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry) [![match](https://img.shields.io/badge/match-93c93e?style=flat)](/reference/ecs-opentelemetry.md#ecs-opentelemetry-relation) [user.id](https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-id)| core |
 | $$$field-user-name$$$[user.name](#field-user-name) |Short name or login of the user.<br><br>type: keyword<br><br>Multi-fields:<br><br>user.name.text (type: match_only_text)<br>example: `a.einstein`<br><br>![OTel Badge](https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry) [![match](https://img.shields.io/badge/match-93c93e?style=flat)](/reference/ecs-opentelemetry.md#ecs-opentelemetry-relation) [user.name](https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-name)| core |
-| $$$field-user-roles$$$[user.roles](#field-user-roles) |Array of user roles at the time of the event.<br><br>type: keyword<br><br><br>**Note**: This field should contain an array of values.example: `["kibana_admin", "reporting_user"]`<br><br>![OTel Badge](https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry) [![match](https://img.shields.io/badge/match-93c93e?style=flat)](/reference/ecs-opentelemetry.md#ecs-opentelemetry-relation) [user.roles](https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-roles)| extended |
+| $$$field-user-roles$$$[user.roles](#field-user-roles) |Array of user roles at the time of the event.<br><br>type: keyword<br><br>**Note**: This field should contain an array of values.<br>example: `["kibana_admin", "reporting_user"]`<br><br>![OTel Badge](https://img.shields.io/badge/OpenTelemetry-4a5ca6?style=flat&logo=opentelemetry) [![match](https://img.shields.io/badge/match-93c93e?style=flat)](/reference/ecs-opentelemetry.md#ecs-opentelemetry-relation) [user.roles](https://opentelemetry.io/docs/specs/semconv/attributes-registry/user/#user-roles)| extended |
 
 ## Field reuse [_field_reuse]
 
@@ -49,11 +49,11 @@ Note also that the `user` fields may be used directly at the root of the events.
 
 | Location | Field set | Description |
 |---|---|---|
-| `user.changes.*` || [user](/reference/ecs-user.md) |Captures changes made to a user.
-| `user.effective.*` || [user](/reference/ecs-user.md) |User whose privileges were assumed.
-| `user.group.*` || [group](/reference/ecs-group.md) |User's group relevant to the event.
-| `user.risk.*` || [risk](/reference/ecs-risk.md) |Fields for describing risk score and level.
-| `user.target.*` || [user](/reference/ecs-user.md) |Targeted user of action taken.
+| `user.changes.*`| [user](/reference/ecs-user.md) |Captures changes made to a user.
+| `user.effective.*`| [user](/reference/ecs-user.md) |User whose privileges were assumed.
+| `user.group.*`| [group](/reference/ecs-group.md) |User's group relevant to the event.
+| `user.risk.*`| [risk](/reference/ecs-risk.md) |Fields for describing risk score and level.
+| `user.target.*`| [user](/reference/ecs-user.md) |Targeted user of action taken.
 
 ### User field usage
 

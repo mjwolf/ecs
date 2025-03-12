@@ -18,7 +18,7 @@ Examples of data sources that would populate the rule fields include: network ad
 
 | Field | Description | Level |
 | --- | --- | --- |
-| $$$field-rule-author$$$[rule.author](#field-rule-author) |Name, organization, or pseudonym of the author or authors who created the rule used to generate this event.<br><br>type: keyword<br><br><br>**Note**: This field should contain an array of values.example: `["Star-Lord"]`<br>| extended |
+| $$$field-rule-author$$$[rule.author](#field-rule-author) |Name, organization, or pseudonym of the author or authors who created the rule used to generate this event.<br><br>type: keyword<br><br>**Note**: This field should contain an array of values.<br>example: `["Star-Lord"]`<br>| extended |
 | $$$field-rule-category$$$[rule.category](#field-rule-category) |A categorization value keyword used by the entity using the rule for detection of this event.<br><br>type: keyword<br><br>example: `Attempted Information Leak`<br>| extended |
 | $$$field-rule-description$$$[rule.description](#field-rule-description) |The description of the rule generating the event.<br><br>type: keyword<br><br>example: `Block requests to public DNS over HTTPS / TLS protocols`<br>| extended |
 | $$$field-rule-id$$$[rule.id](#field-rule-id) |A rule ID that is unique within the scope of an agent, observer, or other entity using the rule for detection of this event.<br><br>type: keyword<br><br>example: `101`<br>| extended |
