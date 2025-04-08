@@ -44,6 +44,7 @@
       example: ipv4
       otel:
         - relation: match
+      convert: lower
 
     - name: iana_number
       level: extended
@@ -54,6 +55,7 @@
           Standardized list of protocols. This aligns well with NetFlow and
           sFlow related logs which use the IANA Protocol Number.
       example: 6
+      validate: "^\\d+$"
 
     - name: transport
       level: core

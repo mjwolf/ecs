@@ -7098,6 +7098,7 @@ network.iana_number:
   normalize: []
   short: IANA Protocol Number.
   type: keyword
+  validate: ^\d+$
 network.inner:
   dashed_name: network-inner
   description: Network.inner fields are added in addition to network.vlan fields to
@@ -7194,6 +7195,7 @@ network.transport:
   short: Protocol Name corresponding to the field `iana_number`.
   type: keyword
 network.type:
+  convert: lower
   dashed_name: network-type
   description: 'In the OSI Model this would be the Network Layer. ipv4, ipv6, ipsec,
     pim, etc
